@@ -7,21 +7,37 @@ function Home()
     return(
         <Jumbotron>
             <Container>
-                Welcome to my little portfolio site. I've been building web sites, games, photobooths, and other apps for the past 20 years or so. 
+                Welcome to my little portfolio site. I've been building web sites, games, photobooths, and other interactives for the past 20 years or so. 
                 Here you'll find a little sampling of the many projects I've worked on and some of the tools I've used to create them.<br/><br/>
                 This site is made with React, React Router and React Bootstrap.
                 <Particles
     params={{
-	    "particles": {
-	        "number": {
-	            "value": 80
-	        },
-	        "size": {
-	            "value": 2,
-	            "random": true
+	    particles: {            
+	        number: {
+                value: 60,
+                density: {
+                    enable: true,
+                    value_area: 800
+                  }
             },
-            "color":{
-                "value": "000000"
+            line_linked: {
+                enable_auto: true,
+                distance: 80,
+                color: "#000",
+                opacity: .2,
+                width: 1,
+                condensed_mode: {
+                  enable: false,
+                  rotateX: 600,
+                  rotateY: 600
+                }
+              },
+	        size: {
+	            value: 1,
+	            random: true
+            },
+            color:{
+                value: "#000"
             }
 	    }
 	}} />
