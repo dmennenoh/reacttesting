@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
+.thumbTitle {
+  margin-bottom: 0%;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.thumbTool {
+  margin-top: 0%;
+  font-size: smaller;
+  color: #666;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .blueText{
   color: #0099DD;
 }
