@@ -18,6 +18,26 @@ code {
   font-family: 'Segoe UI', sans-serif;
 }
 
+.thumbSizer{
+  margin-top: 10px;
+  margin-bottom:30px;  
+  height:auto;
+}
+
+.thumb{  
+  width: 260px;
+  height: 230px;
+  overflow: hidden;
+}
+
+.thumb img{
+  transition: transform .3s ease; /* Animation */
+}
+
+.thumb:hover img{
+  transform: scale(1.2);
+}
+
 .thumbTool {
   margin-top: 0%;
   font-size: smaller;

@@ -35,6 +35,20 @@ function Work()
                     <Thumb src={'./assets/thumbTheLab.jpg'} caption={'GMR The Lab VR interface'} tool={'Unity with HTC Vive'}/>
                 </Col>
             </Row>
+            <Row>
+                <Col sm={3}>
+                    <Thumb src={'./assets/thumbFixel.jpg'} caption={'Fixel 3D Display Prototype'} tool={'Unity and Arduino'}/>
+                </Col>
+                <Col sm={3}>
+                    <Thumb src={'./assets/thumbXYZBert.jpg'} caption={'XYZBert - WebGL Game'} tool={'Unity and Blender'}/>
+                </Col>    
+                <Col sm={3}>
+                    <Thumb src={'./assets/thumbShaders.jpg'} caption={'Some Shaders'} tool={'Unity - Shader Graph'}/>
+                </Col>
+                <Col sm={3}>
+                    <Thumb src={'./assets/thumbBlender.jpg'} caption={'Blender Learnings'} tool={'Blender 2.8'}/>
+                </Col>                
+            </Row>
         </Container>
     );
 }
