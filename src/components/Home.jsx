@@ -1,5 +1,5 @@
 import React from 'react';
-import {Jumbotron,Container} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import Particles from 'react-particles-js';
 
 function Home()

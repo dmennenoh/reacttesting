@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 
 class Work extends Component
