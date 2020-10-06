@@ -1,14 +1,16 @@
 import React from 'react';
 import { Component } from 'react';
 import {Container} from 'react-bootstrap';
+import ModalGall from './ModalGall';
 
 
 class Work extends Component
 {
+    
     constructor() 
     {  
         super(); //needed or we can't use 'this' here 
-        this.state = {data:null, done:false};        
+        this.state = {data:null, done:false, modal:null};        
     }
 
 
@@ -33,25 +35,39 @@ class Work extends Component
         req.send();
     }
 
-    imageClicked = (id) => {
-        console.log("image " + id + " clicked");
+
+    imageClicked = (key) => {
+        let item = null;
+        for(let i = 0; i < this.state.data.galleryData.length; i++){
+            if(this.state.data.galleryData[i].key === key){                
+                this.setState({modal:this.state.data.galleryData[i]});
+                break;
+            }
+        }        
     } 
     
+
+    modalClosed(ref)
+    {
+        ref.setState({modal:null});
+    }
+
+
     render()
     {
         if(!this.state.done){
             return (
                 <Container>
-                    <h2>Loading JSON</h2>
+                    <p>...loading json...</p>
                 </Container>
             );
         }else{
-            return (
+            return (                
                 <Container className='gallery'>
-                    {this.state.data.gallery.map(item => (
-                        <div className="thumbSizer">     
+                    {this.state.data.galleryThumbs.map((item, index) => (
+                        <div key={index} className="thumbSizer">     
                             <div className="thumb">
-                                <img src={item.image} alt={item.title} onClick={() => this.imageClicked(item.id)}/>                
+                                <img src={item.image} alt={item.title} onClick={() => this.imageClicked(item.key)}/>                
                             </div>  
                             <p className="thumbTitle">
                                 {item.title}
@@ -61,7 +77,8 @@ class Work extends Component
                             </p> 
                         </div>
                     ))}                    
-                </Container>
+                    <ModalGall data={this.state.modal} cb={() => this.modalClosed(this)}/>                                                
+                </Container>                 
             );
         }
     }
