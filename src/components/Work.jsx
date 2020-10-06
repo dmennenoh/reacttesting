@@ -37,7 +37,6 @@ class Work extends Component
 
 
     imageClicked = (key) => {
-        let item = null;
         for(let i = 0; i < this.state.data.galleryData.length; i++){
             if(this.state.data.galleryData[i].key === key){                
                 this.setState({modal:this.state.data.galleryData[i]});

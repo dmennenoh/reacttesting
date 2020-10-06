@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal'
 
 class ModalGall extends Component
 {
