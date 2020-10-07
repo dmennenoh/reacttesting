@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
-import {Row, Col, Button} from 'react-bootstrap';
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import {Button} from 'react-bootstrap';
+import ReactHtmlParser from 'react-html-parser';
  
 class ModalGall extends Component
 {
@@ -15,7 +15,7 @@ class ModalGall extends Component
         for(let i = 0; i < this.props.data.images.length; i++){
             retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid\" src=\"" + this.props.data.images[i] + "\" alt=\"pretty\"/></div>";
            
-            if(i % 5 === 0 && i != 0){
+            if(i % 5 === 0 && i !== 0){
                 retS += "</div>";//close current row
                 retS += "<div class=\"justify-content-md-center row row-cols-lg-6\">";//open new row
             }
