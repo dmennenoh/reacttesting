@@ -7,9 +7,9 @@ function Home()
     return(
         
             <Container className="contact">                
-                Welcome to my little portfolio site. I've been building web sites, games, photobooths, and other interactives for the past 20 years or so. 
+                Welcome to my little portfolio site. Thanks for looking. I've been building web sites, games, photobooths, and other interactives for the past 20 years or so. 
                 Here you'll find a little sampling of the many projects I've worked on and some of the tools I've used to create them.<br/><br/>
-                This site is made with React, React Router and React Bootstrap.
+                This site is made with React, React Router and React Bootstrap, and is a work in progress.
                 <Particles
     params={{
 	    particles: {            
