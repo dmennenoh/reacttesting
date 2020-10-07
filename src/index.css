@@ -43,21 +43,25 @@ code {
   max-width: 900px;
 }
 
+.img-pad {
+  margin: 5px;
+}
+
 /* Caption of Modal Image */
 #caption {
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: block;
   width: 80%;
   max-width: 900px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
+  padding: 0 0;
   height: auto;
 }
 
  .gallery {
-  margin-top: 20px;
+  margin-top: 30px;
   display: grid;
   overflow: hidden;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));

@@ -10,14 +10,22 @@ class ModalGall extends Component
         if(!this.props.data){
             return(null);
         }
+        let divisor = 5; 
+        let counter = 0;
         
-        let retS = "<div class=\"justify-content-md-center row row-cols-lg-6\">";
+        if(this.props.data.images.length > divisor){
+            divisor = Math.max(5, Math.floor(this.props.data.images.length / 2));            
+        }
+
+        let retS = "<div class=\"justify-content-md-center row row-cols-lg-5\">";
         for(let i = 0; i < this.props.data.images.length; i++){
-            retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid\" src=\"" + this.props.data.images[i] + "\" alt=\"pretty\"/></div>";
+            retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i] + "\" alt=\"pretty\"/></div>";
            
-            if(i % 5 === 0 && i !== 0){
+            counter++;           
+            if(counter === divisor){
                 retS += "</div>";//close current row
-                retS += "<div class=\"justify-content-md-center row row-cols-lg-6\">";//open new row
+                retS += "<div class=\"justify-content-md-center row row-cols-lg-5\">";//open new row
+                counter = 0;
             }
         }
         retS += "</div>";        
