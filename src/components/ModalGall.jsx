@@ -27,7 +27,11 @@ class ModalGall extends Component
 
             //is there a link defined for this image - what about download links
             if(this.props.data.images[i].link !== undefined){
-                retS += "<a href=\"" + this.props.data.images[i].link + "\"><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div></a>";
+                if(this.props.data.images[i].dl === "true"){
+                    retS += "<a href=\"" + this.props.data.images[i].link + "\" download><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div></a>";
+                }else{
+                    retS += "<a href=\"" + this.props.data.images[i].link + "\" target=\"_blank\"><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div></a>";
+                }
             }else{
                 retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div>";
             }
