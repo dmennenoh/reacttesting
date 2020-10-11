@@ -18,7 +18,7 @@ class ModalGall extends Component
         }
 
         //use a different divisor if it's defined in the JSON - only used on xyzbert so far
-        if(this.props.data.div != undefined){
+        if(this.props.data.div !== undefined){
             divisor = this.props.data.div;
         }
 
@@ -26,7 +26,7 @@ class ModalGall extends Component
         for(let i = 0; i < this.props.data.images.length; i++){
 
             //is there a link defined for this image - what about download links
-            if(this.props.data.images[i].link != undefined){
+            if(this.props.data.images[i].link !== undefined){
                 retS += "<a href=\"" + this.props.data.images[i].link + "\"><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div></a>";
             }else{
                 retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div>";
