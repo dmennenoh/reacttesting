@@ -25,15 +25,17 @@ class ModalGall extends Component
         let retS = "<div class=\"justify-content-md-center row row-cols-lg-5\">";
         for(let i = 0; i < this.props.data.images.length; i++){
 
+            let theText = this.props.data.images[i].text === undefined ? "" : this.props.data.images[i].text;
+
             //is there a link defined for this image - what about download links
             if(this.props.data.images[i].link !== undefined){
                 if(this.props.data.images[i].dl === "true"){
-                    retS += "<a href=\"" + this.props.data.images[i].link + "\" download><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div></a>";
+                    retS += "<a href=\"" + this.props.data.images[i].link + "\" download><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/><p class=\"thumbTool\">" + theText + "</p></div></a>";
                 }else{
-                    retS += "<a href=\"" + this.props.data.images[i].link + "\" target=\"_blank\"><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div></a>";
+                    retS += "<a href=\"" + this.props.data.images[i].link + "\" target=\"_blank\"><div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/><p class=\"thumbTool\">" + theText + "</p></div></a>";
                 }
             }else{
-                retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/></div>";
+                retS += "<div class=\"col\"><img key=\"" + i + "\" class=\"img-fluid img-pad\" src=\"" + this.props.data.images[i].src + "\" alt=\"pretty\"/><p class=\"thumbTool\">" + theText + "</p></div>";
             }
            
             counter++;           
