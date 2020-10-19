@@ -17,12 +17,12 @@ class ModalGall extends Component
             divisor = Math.max(5, Math.floor(this.props.data.images.length / 2));            
         }
 
-        //use a different divisor if it's defined in the JSON - only used on xyzbert so far
+        //use a different divisor if it's defined in the JSON
         if(this.props.data.div !== undefined){
             divisor = this.props.data.div;
         }
 
-        let retS = "<div class=\"justify-content-md-center row row-cols-lg-5\">";
+        let retS = "<div class=\"justify-content-md-center row row-cols-lg-" + divisor.toString() + "\">";
         for(let i = 0; i < this.props.data.images.length; i++){
 
             let theText = this.props.data.images[i].text === undefined ? "" : this.props.data.images[i].text;
@@ -41,7 +41,7 @@ class ModalGall extends Component
             counter++;           
             if(counter === divisor){
                 retS += "</div>";//close current row
-                retS += "<div class=\"justify-content-md-center row row-cols-lg-5\">";//open new row
+                retS += "<div class=\"justify-content-md-center row row-cols-lg-" + divisor.toString() + "\">";//open new row
                 counter = 0;
             }
         }
