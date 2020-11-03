@@ -8,7 +8,7 @@
     {"key": 6, "title":"Associated Bank Suit Up", "image":"./assets/thumbSuitUp.jpg", "tool":"Unity with Bellus 3D Camera"},
     {"key": 12, "title":"Esurance Buster Posey VR Experience", "image":"./assets/thumbPosey.jpg", "tool":"Unity with HTC Vive"},
     {"key": 13, "title":"Warner Bros. Wand Master Training", "image":"./assets/thumbBeasts.jpg", "tool":"Unity with OpenCV"},
-    {"key": 14, "title":"Nissan 100 Mile app", "image":"./assets/thumbHundredMile.jpg", "tool":"Adobe Animte with Google Maps"},
+    {"key": 14, "title":"Nissan 100 Mile app", "image":"./assets/thumbHundredMile.jpg", "tool":"Adobe Animate with Google Maps"},
     {"key": 7, "title":"GMR The Lab VR interface", "image":"./assets/thumbTheLab.jpg", "tool":"Unity with HTC Vive"},
     {"key": 8, "title":"Fixel 3D Display Prototype", "image":"./assets/thumbFixel.jpg", "tool":"Unity and Arduino"},
     {"key": 9, "title":"A Few WebGL Games", "image":"./assets/thumbXYZBert.jpg", "tool":"Unity and Blender"},
