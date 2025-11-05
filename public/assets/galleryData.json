@@ -1,5 +1,4 @@
-{"galleryThumbs": [
-    {"key": 0, "title":"The Beginning", "image":"./assets/thumbNutZ.jpg", "tool":"TI99/4A"},
+{"galleryThumbs": [    
     {"key": 1, "title":"Nissan Sentra Big Shot", "image":"./assets/thumbBigShot.jpg", "tool":"Unity with Logitech G920 Steering Wheel"},
     {"key": 2, "title":"Nissan Pride & Progess Art Wall", "image":"./assets/thumbArtWall.jpg", "tool":"Unity with HTC Vive"},
     {"key": 3, "title":"Xfinity Bobble Head Creator", "image":"./assets/thumbXfinityBobble.jpg", "tool":"Unity and DLib"},
